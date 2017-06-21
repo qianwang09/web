@@ -1,0 +1,48 @@
+<header class="pwcLogo">
+  <div id="headerRight">
+    <ul id="quickLink">
+      <li><a href="javascript:void(window.open('https://janus2/Feedback/Home/Index?appcode=pwcrisk','_blank'));">My Feedback</a></li>
+      <li>|</li>
+      <li><a href="http://visionhelp/guide/" target="_blank">Help</a></li>
+      <li>|</li>
+      <li><a >Logout</a></li>
+    </ul>
+    <div id="welcomeMsg">Welcome, @Model.LoginStaffName [@(ViewData.Keys.Contains("CurrentUserRole") ? ViewBag.CurrentUserRole : "")]</div>
+  </div>
+  <div id="mainNav">
+    <ul>
+      <li><a href="http://vConcierge">vConcierge</a></li>
+      <li><a href="#">Opportunity Identification</a></li>
+      <li class="active"><a href="#">Acceptance &amp; Continuance</a></li>
+      <li><a href="#">Team Identification</a></li>
+      <li><a href="#">Engagement Management</a></li>
+    </ul>
+  </div>
+</header>
+
+<div id="wrapperFull">
+  <div class="reviewerPanel">
+    <ul id="tabs">
+      <li><a href="#tab1">Confidential Matches</a></li>
+      <li><a href="#tab2">My Maintenance of Data</a></li>
+      <li><a href="#tab3">Independence Assessment</a></li>
+      <li><a href="#tab4">Conflict Pre clearance</a></li>
+      <li><a href="#tab5">Quick RC</a></li>
+    </ul>
+    <div class="tab_container">
+      <p-dataTable [value]="confidentials" selectionMode="single" [(selection)]="selectedConfidential" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+        [rows]="10" [responsive]="true">
+        <p-header>CRUD for ConfidentialMatchs</p-header>
+        <p-column field="Status" header="Status" [sortable]="true"></p-column>
+        <p-column field="ResultId" header="ResultId" [sortable]="true"></p-column>
+        <p-column field="ClientName" header="ClientName" [sortable]="true"></p-column>
+        <p-column field="ProjectName" header="ProjectName" [sortable]="true"></p-column>
+        <p-column field="AssessmentType" header="AssessmentType" [sortable]="true"></p-column>
+        <p-column field="LastModifyDate" header="LastModifyDate" [sortable]="true"></p-column>
+        <p-column field="TransId" header="TransId" [sortable]="true"></p-column>
+        <p-column field="totalItems" header="totalItems" [sortable]="true"></p-column>
+      
+      </p-dataTable>
+    </div>
+  </div>
+  <footer></footer>

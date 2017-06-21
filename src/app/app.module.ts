@@ -7,6 +7,9 @@ import 'rxjs/add/operator/toPromise';
 
 import { AppComponent } from './app.component';
 import { CarService } from './cars/carservice';
+import { MyReviewComponent } from './myreview.component';
+import { ConfidentialMatchService } from './confidentials/confidentialmatchservice';
+
 import { InputTextModule, DataTableModule, ButtonModule, DialogModule } from 'primeng/primeng';
 
 @NgModule({
@@ -21,9 +24,9 @@ import { InputTextModule, DataTableModule, ButtonModule, DialogModule } from 'pr
     DialogModule
   ],
   declarations: [
-    AppComponent
+    MyReviewComponent
   ],
-  bootstrap: [ AppComponent ],
-  providers: [ CarService ]
+  bootstrap: [  MyReviewComponent ],
+  providers: [  ConfidentialMatchService]
 })
 export class AppModule { }
