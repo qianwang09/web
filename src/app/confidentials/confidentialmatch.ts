@@ -4,6 +4,7 @@ export interface ConfidentialMatch {
     ClientName?;
     ProjectName?;
     AssessmentType?;
+    IsOGC?;
     LastModifyDate?;
     TransId?;
     totalItems?;
