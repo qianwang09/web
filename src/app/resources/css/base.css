@@ -1,4 +1,6 @@
-﻿@media all {
+﻿@import url("reset.css");
+@import url("toastr.css");
+@media all {
     /* CSS Document */
     body {
         font: normal 13px/120% Arial, Helvetica, sans-serif;
@@ -740,6 +742,7 @@
             text-overflow: ellipsis;
             -o-text-overflow: ellipsis;
             -ms-text-overflow: ellipsis;
+            -moz-binding: url(<q>assets/xml/ellipsis.xml#ellipsis</q> );
         }
 
             .clientName h1 a {
@@ -775,6 +778,10 @@
             text-align: left;
             overflow: hidden;
             white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            -ms-text-overflow: ellipsis;
+            -moz-binding: url(<q>assets/xml/ellipsis.xml#ellipsis</q> );
         }
 
         .cesInfo li.sec {
@@ -1041,6 +1048,10 @@
                 margin-top: 5px;
                 overflow: hidden;
                 white-space: nowrap;
+                text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                -ms-text-overflow: ellipsis;
+                -moz-binding: url(../%3Cq%3Eassets/xml/ellipsis.xml#ellipsis%3C/q%3E);
             }
 
             .riskList li div {

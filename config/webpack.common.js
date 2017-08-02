@@ -35,14 +35,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        use: 'file-loader?name=assets/[name].[hash].[ext]'
+        use: 'file-loader?name=assets/images/[name].[ext]'
       },
       {
         test: /\.css$/,
         exclude: helpers.root('src', 'app'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?sourceMap'
+          use: 'css-loader'
         })
       },
       {
@@ -62,11 +62,9 @@ module.exports = {
       helpers.root('./src'), // location of your src
       {} // a map of your routes
     ),
-
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'primeng', 'rxjs', 'angular', 'polyfills']
     }),
-
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ConfidentialMatch} from './confidentials/confidentialmatch';
 import {ConfidentialMatchService} from './confidentials/confidentialmatchservice';
-
+import '../assets/css/base.css';
 import '../../node_modules/primeng/resources/themes/omega/theme.css';
 import '../../node_modules/primeng/resources/primeng.min.css';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
